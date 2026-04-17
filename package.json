@@ -1,0 +1,57 @@
+{
+  "name": "@console-one/namespace",
+  "version": "0.1.0",
+  "description": "Multi-dimensional, temporal artifact index. Dual-mode addressing (version vs. stage), declarative metric-based indexes, synchronous ingestor, TimelineKey range queries, subscription-based change notifications, over pluggable storage adapters.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/console-one/namespace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/console-one/namespace/issues"
+  },
+  "homepage": "https://github.com/console-one/namespace#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "ROADMAP.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "smoke": "node dist/smoke.js",
+    "test": "npm run smoke",
+    "prepublishOnly": "npm run clean && npm run build && npm run smoke"
+  },
+  "keywords": [
+    "namespace",
+    "artifact-index",
+    "timeline",
+    "versioning",
+    "path-addressing",
+    "range-query",
+    "metric-partitioning",
+    "event-sourcing"
+  ],
+  "author": "Andrew Chalmers",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@console-one/assessable": "^0.1.1",
+    "@console-one/multimap": "^0.2.0",
+    "@console-one/subscription": "^0.1.1",
+    "@console-one/walker": "^0.1.1"
+  }
+}
