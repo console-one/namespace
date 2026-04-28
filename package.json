@@ -1,6 +1,6 @@
 {
   "name": "@console-one/namespace",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Multi-dimensional, temporal artifact index. Dual-mode addressing (version vs. stage), declarative metric-based indexes, synchronous ingestor, TimelineKey range queries, subscription-based change notifications, over pluggable storage adapters.",
   "repository": {
     "type": "git",
